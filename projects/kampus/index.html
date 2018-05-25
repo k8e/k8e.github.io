@@ -33,7 +33,7 @@
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://katieschaffer.com">KatieSchaffer.com</a>
+              <a class="nav-link" href="../..">KatieSchaffer.com</a>
             </li>
           </ul>
         </div>
@@ -85,12 +85,20 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
+
             <h1>About</h1>
-            <p>In 2014, I joined a startup called Kampus, LLC. The goal was to create a social network exclusive to college students within their own campuses. It was a social hub, info center, community store, professor/class review host, and many more possibilities. Essentially, it was meant to be a go-to app for college campus life. As a college freshman at the time, I loved the idea, and I was eager to contribute.</p>
-            <p>I soon became the startup's main web developer, as we needed an online portal to interface with partner businesses. As we were hosting an app for college students, the next logical step was to allow college-town businesses to interact. </p>
-            <p>As a proof of concept, I built the business registration portal and account dashboard. The dashboard allowed a partner to manager their account information, business information, and any discount/coupon codes they wished to display in the Kampus "local deals" hub. The dashboard was built using jQuery, the Bootstrap layout grid, and lots of manual CSS. As our team was using the Parse framework, the dashboard interfaced with our central database using the Parse API.</p>
+            <p>In 2014, I joined a startup called <a href="https://techli.com/2014/04/niche-social-network-puts-college-life-in-your-pocket/">Kampus, LLC.</a> The goal was to create a social network exclusively for college students within their own campuses. It was a social hub, info center, community "craigslist", professor/class review host, and many more possibilities. Essentially, it was meant to be a go-to app for college campus life. As a college freshman at the time, I loved the idea, and I was eager to contribute.</p>
+            <p>I soon became the startup's main web developer, as we needed an online portal to interface with partner businesses. Since we were hosting an app for college students, the next logical step was to allow the local college-town businesses to interact. </p>
+            <p>As a proof of concept, I built the business registration portal and account dashboard. The dashboard allowed a partner to manage their account information, business information, and any discount/coupon codes they wished to display in the Kampus "local deals" hub. The dashboard frontend was built using jQuery, the Bootstrap layout grid, and lots of manual CSS (because I was really into that back then). Since our team was using the Parse framework for the main Kampus app, I used the Parse JavaScript API to interface with our central database.</p>
             <p>Needless to say, this was my first full-blown web application, and there are plenty of things I would do differently if I were to create this today. However, as a newbie it was a pretty awesome exercise in designing a web interface from scratch.</p>
-            <p><a class="text-light home-link" href="https://katieschaffer.com">KatieSchaffer.com</a></p>
+
+            <video id="demo-video-player" width="700" autoplay>
+                <source src="./assets/KampusDemo.mp4" type="video/mp4">
+                <source src="./assets/KampusDemo.ogv" type="video/ogg">
+            </video> 
+
+            <p><a class="text-light home-link" href="../..">KatieSchaffer.com</a></p>
+
           </div>
         </div>
       </div>
@@ -99,6 +107,20 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+    window.onload = function() {
+      var demo_player = document.getElementById("demo-video-player");
+
+      demo_player.loop = true;
+      demo_player.load();
+      demo_player.addEventListener('mouseover', function() {
+        demo_player.setAttribute("controls","controls");
+      });
+      demo_player.addEventListener('mouseout', function() {
+        demo_player.removeAttribute("controls");
+      });
+    }
+    </script>
 
   </body>
 
