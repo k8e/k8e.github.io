@@ -63,3 +63,7 @@ p>a {
 .carousel-indicators .active {
   background-color: rgba(0,0,0,.8);
 }
+
+.carousel-item-content {
+  height: 500px;
+}
